@@ -66,16 +66,3 @@ def knight_moves(start, finish)
   
   knight.to_s
 end
-
-
-
-knight_moves([0, 0], [7, 7])
-knight_moves([7, 7], [0, 0])
-knight_moves([7, 0], [0, 7])
-knight_moves([0, 7], [7, 0])
-knight_moves([6, 1], [0, 0])
-knight_moves([0, 0], [6, 1])
-knight_moves([1, 1], [0, 7])
-knight_moves([0, 7], [1, 1])
-knight_moves([0, 7], [7, 7])
-knight_moves([3, 3], [4, 3])
