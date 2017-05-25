@@ -66,3 +66,20 @@ def knight_moves(start, finish)
   
   knight.to_s
 end
+
+def knight_moves_rec(start, finish, knight = nil, board = nil, queue = [])
+  board ||= Board.new
+  knight ||= Knight.new(start)
+  
+  return knight if knight.position == finish
+  
+  knight.move(board).children.each do |child|
+    node = Knight.new(child)
+    node.parent = knight
+    queue << node
+  end
+  
+  knight = queue.shift
+  
+  knight_moves(start, finish, knight, board, queue)
+end
