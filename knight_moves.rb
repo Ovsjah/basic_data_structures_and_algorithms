@@ -81,5 +81,5 @@ def knight_moves_rec(start, finish, knight = nil, board = nil, queue = [])
   
   knight = queue.shift
   
-  knight_moves(start, finish, knight, board, queue)
+  knight_moves_rec(start, finish, knight, board, queue).to_s
 end
